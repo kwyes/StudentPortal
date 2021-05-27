@@ -37,8 +37,7 @@ function getEnvironmentSettings() {
                 'adminScript' => '/assets/'.$adminScriptName,
                 'apiPath' => "https://{$hostName}/api/index.php",
                 'pdo' => array(
-                    'database' => 'mssql',
-                    'dsn' => 'odbc:Driver={SQL Server};Server=10.100.4.6;Database=Bodwell;Uid=web;Pwd=AJgw!cG4nw;',
+                    
                 ),
                 'smtp' => array(
                     'debug' => false,
@@ -46,8 +45,7 @@ function getEnvironmentSettings() {
                     'port' => '587',
                     'secure' => 'TLS',
                     'auth' => true,
-                    'username' => 'apikey',
-                    'password' => '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',
+                    
                 ),
                 'backdoor' => $backdoor,
             );
@@ -63,8 +61,7 @@ function getEnvironmentSettings() {
                 'apiPath' => "http://{$hostName}/student.bodwell.edu/api/index.php",
                 'adminApiPath' => "http://{$hostName}/admin.bodwell.edu/BHS/SPAdmin/api/index.php",
                 'pdo' => array(
-                    'database' => 'mssql',
-                    'dsn' => 'odbc:Driver={SQL Server};Server=10.100.0.5;Database=Bodwell;Uid=devweb;Pwd=9zQjq4WRgkFF;',
+                   
                 ),
                 'bypassAuth' => false,
                 'smtp' => array(
@@ -73,8 +70,7 @@ function getEnvironmentSettings() {
                     'port' => '587',
                     'secure' => 'TLS',
                     'auth' => true,
-                    'username' => 'apikey',
-                    'password' => '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',
+                    
                 ),
                 'backdoor' => $backdoor,
             );
@@ -90,13 +86,12 @@ function getEnvironmentSettings() {
             'apiPath' => "http://{$hostName}/student.bodwell.edu/api/index.php",
             'adminApiPath' => "http://{$hostName}/api/index.php",
             'pdo' => array(
-                'database' => 'mssql',
-                'dsn' => 'odbc:Driver={SQL Server};Server=10.0.0.209;Database=Bodwell;Uid=sa;Pwd=pm2em9GhOOWt;',
+                
             ),
             'bypassAuth' => false,
             'smtp' => array(
                 'debug' => false,
-                'host' => 'bodwell-edu.mail.protection.outlook.com',
+                
                 'port' => '587',
                 'secure' => 'TLS',
                 'auth' => false,
@@ -125,13 +120,13 @@ function getEnvironmentSettings() {
                     'staffId' => 'F0123',
                     'staffRole' => '99',
                     'studentId' => '201500126',
-                    'email' => 'dev.user201500126@student.bodwell.edu'.PHP_EOL,
+                    
                     'password' => 'c4e7e3792c',
                 ),
                 'bypassAuth' => true,
                 'smtp' => array(
                     'debug' => 0,
-                    'host' => 'smtp.van.terago.ca',
+                    
                     'port' => '25',
                     'secure' => '',
                     'auth' => false,
