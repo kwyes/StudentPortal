@@ -1,0 +1,54 @@
+<div class="modal" id="searchStudentModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="card card-login card-plain">
+                <div class="modal-header justify-content-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="modal-close-icon">&times;</span>
+                    </button>
+
+
+                    <div class="header header-primary text-center">
+                        <h6>Click on the student name to select.</h6>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                        <!-- <form id="actMdlValidation" action="" method=""> -->
+                        <input type="hidden" id="pageId-comeFrom" name="" value="">
+                        <table id="searchStuMdl-table" class="table table-hover" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">STUDENT ID</th>
+                                    <th class="text-center">STUDENT NAME</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+      $("#searchStuMdl-table").on("click", "tbody tr", function () {
+        var id = $(this).attr("data-id");
+        var fullName = $(this).attr("data-full-name");
+        var CurrentStatus = $(this).attr("data-status");
+
+        if (id == "") {
+          showSwal("error", "Try to search student again");
+        } else {
+
+          $(".return-StudentID").val(id);
+          $(".return-StudentName").val(fullName);
+          $("#searchStudentModal").modal("hide");
+        }
+      });
+   });
+</script>

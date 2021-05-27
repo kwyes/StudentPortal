@@ -1,0 +1,201 @@
+<!-- Modal for Self-Submit Hours -->
+<div class="modal" id="resetEmailPwModal">
+  <div class="modal-dialog modal-login modal-lg">
+    <div class="modal-content">
+      <div class="card card-login card-plain">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="modal-close-icon">&times;</span>
+          </button>
+          <div class="header header-primary text-center">
+            <h4>Reset School Email Password</h4>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="card-body">
+            <div class="text-right font-italic"><label><span class="color-red">*</span> = Required</label></div>
+            <form id="form-resetEmailPw_Login" class="needs-validation" novalidate>
+              <input type="hidden" class="resetMdl-hiddenCounsellorEmail" name="sCounsellorEmail" value="">
+              <h6>Who are you?</h6>
+              <div class="form-group">
+                <label for="resetMdl-fName">First Name ( Not English Name ) <span class="color-red">*</span></label>
+                <input type="text" class="form-control resetMdl-fName" name="sFirstName" required>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resetMdl-lName">Last Name <span class="color-red">*</span></label>
+                <input type="text" class="form-control resetMdl-lName" name="sLastName" required>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resetMdl-dob">Date of Birth <span class="color-red">*</span></label>
+                <input type="text" onkeydown="return false" class="form-control resetMdl-dob datepicker" data-date-format="YYYY-MM-DD" name="sDOB" required>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resetMdl-pEmail">Personal Email Address <span class="color-red">*</span></label>
+                <input type="email" class="form-control resetMdl-pEmail" name="PersonalEmail" required>
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resetMdl-sEmail">School Email Address <span class="color-red">*</span></label>
+                <input type="email" class="form-control resetMdl-sEmail" name="SchoolEmail" required>
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resetMdl-counsellor">Counsellor <span class="color-red">*</span></label>
+                <select name="sCounsellor" class="form-control resetMdl-counsellor" required></select>
+                <div class="invalid-feedback">
+                  Please enter a valid Student ID.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resetMdl-studentId">Student ID</label>
+                <input class="form-control resetMdl-studentId" name="StudentID" pattern="[0-9]{9,9}">
+                <div class="invalid-feedback">
+                  Please enter a valid Student ID.
+                </div>
+              </div>
+
+              <h6 class="mg-t-40">Where are you now?</h6>
+              <div class="form-group">
+                <label for="resetMdl-country">Country <span class="color-red">*</span></label>
+                <select name="sCountry" class="form-control resetMdl-country" required></select>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resetMdl-city">City <span class="color-red">*</span></label>
+                <input type="text" class="form-control resetMdl-city" name="sCity" required>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <h6 class="mg-t-40">When can you receive a call?</h6>
+              <label class="color-red">Your local time (eg. if you are in Hong Kong, this is Hong Kong time)
+              </label>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="resetMdl-date">Date <span class="color-red">*</span></label>
+                    <input type="text" onkeydown="return false" class="form-control resetMdl-date datepicker" name="sDate" data-date-format="YYYY-MM-DD" required>
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="resetMdl-hour">Hour <span class="color-red">*</span></label>
+                    <select name="sHour" class="form-control resetMdl-hour" required></select>
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="resetMdl-min">Min <span class="color-red">*</span></label>
+                    <select name="sMin" class="form-control resetMdl-min" required></select>
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="resetMdl-ampm">AM/PM <span class="color-red">*</span></label>
+                    <select name="sAmpm" class="form-control resetMdl-ampm" required>
+                      <option value="">Select AM/PM...</option>
+                      <option value="am">AM</option>
+                      <option value="pm">PM</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div class="form-group">
+                <label for="resetMdl-phone">Phone Number <span class="color-red">*</span></label>
+                <input type="text" class="form-control resetMdl-phone" name="sPhoneNumber" required>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="resetMdl-translation">Do you need translation while calling?</label>
+                <div class="row custom-row">
+                  <div class="form-check-radio col-md-3">
+                    <label class="form-check-label">
+                      <input class="form-check-input resetMdl-translation" type="radio" name="translation" id="" value="1"
+                        autocomplete="off" required>
+                      Yes
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+                  <div class="form-check-radio col-md-3">
+                    <label class="form-check-label">
+                      <input class="form-check-input resetMdl-translation" type="radio" name="translation" id="" value="0" required
+                        checked>
+                      No
+                      <span class="form-check-sign"></span>
+                      <div class="invalid-feedback">
+                        This field is required.
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-success custom-btn" id="resetMdl-submit-btn">Submit</button>
+            <button type="button" class="btn btn-warning custom-btn" id="resetMdl-reset-btn">Reset</button>
+            <button type="reset" class="btn btn-default custom-btn" id="resetMdl-cancel-btn">Cancel</button>
+          </div>
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      dateTimePicker();
+      getCounsellorsList(21);
+      getCountriesList();
+      var hour = getHourList();
+      var min = getMinList();
+
+      $('.resetMdl-hour').html(hour);
+      $('.resetMdl-min').html(min);
+
+      $('.resetMdl-counsellor').change(function(event){
+        var email = $(this).find(':selected').attr('data-id')
+        $('.resetMdl-hiddenCounsellorEmail').val(email);
+      })
+    });
+  </script>

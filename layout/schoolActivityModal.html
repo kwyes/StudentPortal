@@ -1,0 +1,112 @@
+<!-- Modal for School Activity Detail(on Browse School Activities) -->
+<!-- <div class="modal fade modal-primary" id="actDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true"> -->
+<div class="modal" id="actDetailModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="card card-login card-plain">
+        <div class="modal-header justify-content-center">
+          <input type="hidden" class="joinActivityId" name="joinActivityId" value="">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+
+          <div class="header header-primary text-center">
+            <h4>School Activity Detail</h4>
+            <label class="actDetailModal-term">Winter 2019</label>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="card-body">
+            <table id="participation-actDetail" class="table table-hover" cellspacing="0" width="100%" style="table-layout: fixed;">
+              <tbody>
+                <tr>
+                  <td>Activity Name</td>
+                  <td>
+                    <div class="actDetailModal-title">Basketball</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Staff Leader</td>
+                  <td class="actDetailModal-StfLeader row">
+                    <div class="stf1 col-md-6 text-center">
+                      <img class="stf1-img" alt="stf1" src="assets/img/student.png" onerror="this.src='assets/img/student.png'">
+                      <div class="stf1-name"></div>
+                    </div>
+                    <div class="stf2 col-md-6 text-center">
+                      <img class="stf2-img" alt="stf2" onerror="this.src='this.src='assets/img/student.png'">
+                      <div class="stf2-name"></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Description</td>
+                  <td class="actDetailModal-description" style="word-wrap:break-word">Sample Description</td>
+                </tr>
+                <tr>
+                  <td>Category</td>
+                  <td class="actDetailModal-category">0.5 Hours</td>
+                </tr>
+                <tr>
+                  <td>Enrollment Type</td>
+                  <td class="actDetailModal-enrType">Bording</td>
+                </tr>
+                <tr>
+                  <td>Eligible for VLWE?</td>
+                  <td>
+                    <div class="form-group">
+                      <div class="row custom-row">
+                        <div class="form-check-radio col-md-3">
+                          <label class="form-check-label">
+                            <input class="form-check-input actDetailModal-vlweY" type="radio" name="act-vlwe" id=""
+                              value="1" autocomplete="off">
+                            Yes
+                            <span class="form-check-sign"></span>
+                          </label>
+                        </div>
+                        <div class="form-check-radio col-md-3">
+                          <label class="form-check-label">
+                            <input class="form-check-input actDetailModal-vlweN" type="radio" name="act-vlwe" id=""
+                              value="0" autocomplete="off">
+                            No
+                            <span class="form-check-sign"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td class="actDetailModal-location">East Gym</td>
+                </tr>
+                <tr>
+                  <td>Meeting Place</td>
+                  <td class="actDetailModal-meetPlace">East Gym</td>
+                </tr>
+                <tr>
+                  <td>Start time</td>
+                  <td class="actDetailModal-start">2018-12-05(Wed) 5:30 PM</td>
+                </tr>
+                <tr>
+                  <td>End time</td>
+                  <td class="actDetailModal-end">2018-12-05(Wed) 6:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Base Hours</td>
+                  <td class="actDetailModal-hours">0.5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer text-center">
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,176 @@
+<div class="modal" id="leaveRequestModal">
+  <div class="modal-dialog modal-login modal-lg">
+    <div class="modal-content">
+      <div class="card card-login card-plain">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="modal-close-icon">&times;</span>
+          </button>
+          <div class="header header-primary text-center">
+            <h4>Leave Request Form</h4>
+            <p class="modalSubHeader">
+              Please complete all boxes with as much detail and as honestly as possible. Follow all criteria for
+              Leave Request Form.
+            </p>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="card-body">
+            <div class="text-right font-italic"><label><span class="color-red">*</span> = Required</label></div>
+            <form id="leaveRequestForm" class="needs-validation" novalidate>
+
+              <div class="form-group">
+                <label for="leave-type">Leave Type<span class="color-red"> *</span></label>
+                <div class="row custom-row">
+                  <div class="form-check-radio col-md-3">
+                    <label class="form-check-label">
+                      <input class="form-check-input leave-type" type="radio" name="leavetype" id="" value="AWP" autocomplete="off" required disabled>
+                      AWP
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+                  <div class="form-check-radio col-md-3">
+                    <label class="form-check-label">
+                      <input class="form-check-input leave-type" type="radio" name="leavetype" id="" value="Campus Leave" required checked>
+                      Campus Leave
+                      <span class="form-check-sign"></span>
+                      <div class="invalid-feedback">
+                        This field is required.
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="leave-sDate">Start Datetime <span class="color-red">*</span></label>
+                    <input type="text" class="form-control" data-date-format="YYYY-MM-DD hh:mm:ss a" name="startDate" id="leave-sDate" required onkeydown="return false">
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="leave-eDate">End Datetime <span class="color-red">*</span></label>
+                    <input type="text" class="form-control" data-date-format="YYYY-MM-DD hh:mm:ss a" name="endDate" id="leave-eDate"  required onkeydown="return false">
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div class="form-group test">
+                <label for="leave-approver">Approver Staff (Choose the Staff Member who can best check and approve
+                  this submission.) <span class="color-red">*</span></label>
+                <select name="approver" id="leave-approver" class="custom-select" onchange="getFullStaffName('leave-approver', 'leave-approver-FullName')" required>
+                </select>
+                <input type="hidden" id="leave-approver-FullName" name="approverFullName" value="">
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="leave-approverPic">Approver Picture</label><br />
+                  <div class="frame-approverPic text-center">
+                    <img draggable="false" src="assets/img/student.png" alt="approverPic" id="leave-approverPic" class="staff-photo" onerror="this.src='assets/img/student.png'">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <label for="leave-reason">Reason <span class="color-red">*</span></label>
+                    <div class="div-reason">
+
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="leave-doing">Campus Leave Details <span class="color-red">*</span></label>
+                    <textarea class="form-control align-self-end" id="leave-doing" name="doing" rows="100" maxlength="1000"></textarea>
+
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label for="leave-comment">Comment</label>
+                    <textarea class="form-control align-self-end" id="leave-comment" name="comment" rows="100" maxlength="1000"></textarea>
+                  </div>
+
+                </div>
+
+
+              </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-success custom-btn" id="leave-submit-btn">Submit</button>
+            <button type="reset" class="btn btn-default custom-btn" id="leave-cancel-btn" data-dismiss="modal">Cancel</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      // dateTimePickerV2();
+
+      if ($('input[type=radio][name=leavetype]:checked').val() == 'Campus Leave') {
+        $('.div-reason').html(
+          '<select id="leave-reason" class="custom-select" name="leaveReason"><option value="Necessary appointments (doctor, bank, counsellor, etc)">Necessary appointments (doctor, bank, counsellor, etc)</option> <option value="Outdoor exercise (run, bike, walk, etc)">Outdoor exercise (run, bike, walk, etc)</option><option value="Essential items  pick-up (medicine, nutritional supplements, etc)">Essential items  pick-up (medicine, nutritional supplements, etc)</option><option value="Weekend Pass">Weekend Pass</option><option value="Weekday Pass">Weekday Pass</option></select>'
+        );
+      } else {
+        $('.div-reason').html('<textarea class="form-control align-self-end" name="leaveReason" id="leave-reason" rows="300" maxlength="1000" required></textarea>');
+      }
+      $('input[type=radio][name=leavetype]').change(function() {
+        $('.div-reason').html('');
+        if (this.value == 'AWP') {
+          $('.div-reason').html('<textarea class="form-control align-self-end" name="leaveReason" id="leave-reason" rows="300" maxlength="1000" required></textarea>');
+          $('#leave-hours').val('');
+          $('.div-timeselection').hide();
+        } else if (this.value == 'Campus Leave') {
+          $('.div-reason').html(
+            '<select id="leave-reason" class="custom-select" name="leaveReason"><option value="Necessary appointments (doctor, bank, counsellor, etc)">Necessary appointments (doctor, bank, counsellor, etc)</option> <option value="Outdoor exercise (run, bike, walk, etc)">Outdoor exercise (run, bike, walk, etc)</option><option value="Essential items  pick-up (medicine, nutritional supplements, etc)">Essential items  pick-up (medicine, nutritional supplements, etc)</option><option value="Weekend Pass">Weekend Pass</option><option value="Weekday Pass">Weekday Pass</option></select>'
+          );
+          $('#leave-hours').val('');
+          $('.div-timeselection').show();
+        }
+      });
+
+      $('#leave-sDate,#leave-eDate').datetimepicker({
+        ignoreReadonly: true,
+        stepping:15,
+        icons: {
+        time: "fa fa-clock-o",
+        date: "fa fa-calendar",
+        up: "fa fa-chevron-up",
+        down: "fa fa-chevron-down",
+        previous: 'fa fa-chevron-left',
+        next: 'fa fa-chevron-right',
+        today: 'fa fa-screenshot',
+        clear: 'fa fa-trash',
+        close: 'fa fa-remove'
+      }});
+
+      $('#leave-sDate').datetimepicker().on('dp.change', function (e) {
+            var incrementDay = moment(new Date(e.date));
+            $('#leave-eDate').data('DateTimePicker').minDate(incrementDay);
+        });
+
+        // $('#leave-eDate').datetimepicker().on('dp.change', function (e) {
+        //     var decrementDay = moment(new Date(e.date));
+        //     $('#leave-sDate').data('DateTimePicker').maxDate(decrementDay);
+        // });
+
+
+    });
+  </script>

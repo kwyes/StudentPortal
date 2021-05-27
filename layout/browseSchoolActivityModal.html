@@ -1,0 +1,53 @@
+<!-- Modal for Browse School Activities -->
+<div class="modal fade modal-primary" id="schoolActModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="card card-login card-plain">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+
+          <div class="header header-primary text-center">
+            <h4>Browse School Activities</h4>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table id="participation-act" class="table table-hover display nowrap" cellspacing="0" width="100%">
+                <thead class="text-warning text-center">
+                  <tr>
+                    <th>Title</th>
+                    <th>Staff Leader</th>
+                    <th>Start Date</th>
+                    <th>Base Hours</th>
+                    <th>enrollment Type</th>
+                    <th>Activity Category</th>
+                    <th>VLWE</th>
+                    <th>Max enrollment</th>
+                    <th>Current</th>
+                    <th>Left</th>
+                    <th>enrollment Status</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    pagerNumResize();
+  });
+</script>

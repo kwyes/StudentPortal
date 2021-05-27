@@ -1,0 +1,253 @@
+<!-- Modal for Self-Submit Hours -->
+<!-- <div class="modal fade modal-primary" id="submitHourModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true"> -->
+<div class="modal" id="submitHourModal">
+  <div class="modal-dialog modal-login modal-lg">
+    <div class="modal-content">
+      <div class="card card-login card-plain">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="modal-close-icon">&times;</span>
+          </button>
+          <div class="header header-primary text-center">
+            <h4>Self-submit Hours</h4>
+            <p class="modalSubHeader">
+              Please complete all boxes with as much detail and as honestly as possible. Follow all criteria for
+              self-submitted activities. Approvers may ask you for proof/evidence of this activity, and will reject
+              incomplete or dishonest submissions.
+            </p>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="card-body">
+            <div class="text-right font-italic"><label><span class="color-red">*</span> = Required</label></div>
+            <form class="needs-validation" novalidate>
+              <div class="form-group">
+                <label for="sSubmit-actName">Activity Name (e.g. Volunteering to plant trees, Working out, etc.)
+                  <span class="color-red">*</span></label>
+                <input type="text" class="form-control" name="act-name" id="sSubmit-actName" required>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="sSubmit-actCategory">Activity Category <span class="color-red">*</span></label>
+                <select name="ctegory" id="sSubmit-actCategory" class="custom-select" required>
+                  <option value="">Select..</option>
+                  <option value="10">Physical, Outdoor & Recreation Education</option>
+                  <option value="11">Academic, Interest & Skill Development</option>
+                  <option value="12">Citizenship, Interaction & Leadership Experience</option>
+                  <option value="13">Arts, Culture & Local Exploration</option>
+                  <!-- <option value="21">Volunteer & Work Experience</option> -->
+                </select>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group dispVLWERadio">
+                <label for="sSubmit-vlwe">Qualifies for Career Exploration hours? (i.e. Volunteer hours)<span
+                    class="color-red"> *</span></label>
+                <div class="row custom-row">
+                  <div class="form-check-radio col-md-3">
+                    <label class="form-check-label">
+                      <input class="form-check-input sSubmit-vlwe" type="radio" name="vlwe" id="" value="1"
+                        autocomplete="off" required>
+                      Yes
+                      <span class="form-check-sign"></span>
+                    </label>
+                  </div>
+                  <div class="form-check-radio col-md-3">
+                    <label class="form-check-label">
+                      <input class="form-check-input sSubmit-vlwe" type="radio" name="vlwe" id="" value="0" required
+                        checked>
+                      No
+                      <span class="form-check-sign"></span>
+                      <div class="invalid-feedback">
+                        This field is required.
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="sSubmit-actName">Location (e.g. Heywood Park, Genesis Gym, etc.)
+                  <span class="color-red">*</span></label>
+                <input type="text" class="form-control" name="location" id="sSubmit-location" required>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="sSubmit-sDate">Start Date <span class="color-red">*</span></label>
+                    <input type="text" class="form-control datepicker" data-date-format="YYYY-MM-DD" name="start-date"
+                      id="sSubmit-sDate" required onkeydown="return false">
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="sSubmit-eDate">End Date <span class="color-red">*</span></label>
+                    <input type="text" class="form-control" name="end-date"
+                      id="sSubmit-eDate" required onkeydown="return false" readonly>
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="sSubmit-hours" class="control-label">Total number of hours
+                      <span class="color-red">*</span></label>
+                    <!-- <input type="number" class="form-control" name="hours" id="sSubmit-hours"
+                      pattern="[0-9]*(\.)*[0-9]+" step="0.5" min="0.5" required> -->
+                    <select name="hours" id="sSubmit-hours" class="custom-select" required>
+                    </select>
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                    <!-- <div class="err-hours-deci">
+                    Please input in the first decimal place.
+                  </div>
+                  <div class="err-hours-num">
+                    Please input number.
+                  </div> -->
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- <div class="form-group">
+                <label for="sSubmit-witness">Self-Submit Witness <span class="color-red">*</span></label>
+                <input type="text" class="form-control" name="witness" id="sSubmit-witness" required>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div> -->
+
+
+              <!-- <div class="form-group">
+                <label for="sSubmit-supervisor">Activity Supervisor</label>
+                <input type="text" class="form-control" id="sSubmit-supervisor" name="supervisor">
+              </div> -->
+
+              <div class="form-group test">
+                <label for="sSubmit-approver">Approver Staff (Choose the Staff Member who can best check and approve
+                  this submission.) <span class="color-red">*</span></label>
+                <select name="approver" id="sSubmit-approver" class="custom-select"
+                  onchange="getFullStaffName('sSubmit-approver', 'sSubmit-approver-FullName')" required>
+                </select>
+                <input type="hidden" id="sSubmit-approver-FullName" name="approverFullName" value="">
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-5">
+                  <label for="sSubmit-approverPic">Approver Picture</label><br />
+                  <div class="frame-approverPic text-center">
+                    <img draggable="false" src="assets/img/student.png" alt="approverPic" id="sSubmit-approverPic"
+                      onerror="this.src='assets/img/student.png'">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <label for="sSubmit-comment">Comment <span class="color-red">*</span></label>
+                    <textarea class="form-control align-self-end" id="sSubmit-comment1" rows="10" maxlength="1000"
+                      required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control align-self-end" id="sSubmit-comment2" rows="10" maxlength="1000"
+                      required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control align-self-end" id="sSubmit-comment3" rows="10" maxlength="1000"
+                      required></textarea>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-success custom-btn" id="sSubmit-submit-btn">Submit</button>
+            <button type="reset" class="btn btn-default custom-btn" id="sSubmit-cancel-btn">Cancel</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      dateTimePicker();
+
+      var comment1 = "Describe in detail what you did on this activity or your duties\n" +
+        "(e.g., I helped to dig holes in the ground and plant trees at the park, I performed my upper body exercise circuit, etc.)";
+      $('#sSubmit-comment1').prop('placeholder', comment1);
+
+      var comment2 =
+        "Describe what skills you practiced or learned, and how you can use these skills in the future.";
+      $('#sSubmit-comment2').prop('placeholder', comment2);
+
+      var comment3 = "Your event supervisor name and contact info.\n" +
+        "(if this does not apply, write ‘N/A’)";
+      $('#sSubmit-comment3').prop('placeholder', comment3);
+
+      $('.sSubmit-vlwe').change(function(event) {
+        if(this.value == 1){
+          var comment1 = "In full sentences, explain what you did for this activity in DETAIL. (ex. survey people, talk to career guide, work on product…) ";
+          var comment2 =
+            "In min 50 words or more, explain in full sentences.\n" +
+            "What SKILLS did you learn/develop from this? Explain how you developed these skills. ";
+          var comment3 = "If these hours are to be counted for your Career Exploration Hours, answer the following in full sentences: \n" +
+              "How might the above skills be important for your future career or post-secondary path? ";
+          $('#sSubmit-comment1').prop('placeholder', comment1);
+          $('#sSubmit-comment2').prop('placeholder', comment2);
+          $('#sSubmit-comment3').prop('placeholder', comment3);
+        } else {
+          var comment1 = "Describe in detail what you did on this activity or your duties\n" +
+            "(e.g., I helped to dig holes in the ground and plant trees at the park, I performed my upper body exercise circuit, etc.)";
+          var comment2 =
+            "Describe what skills you practiced or learned, and how you can use these skills in the future.";
+          var comment3 = "Your event supervisor name and contact info.\n" +
+            "(if this does not apply, write ‘N/A’)";
+          $('#sSubmit-comment1').prop('placeholder', comment1);
+          $('#sSubmit-comment2').prop('placeholder', comment2);
+          $('#sSubmit-comment3').prop('placeholder', comment3);
+        }
+      });
+
+      var hoursOpt = "<option value=''>Select..</option>";
+      var num;
+      for (let i = 0.5; i <= 40; i += 0.5) {
+        num = i.toFixed(1)
+        hoursOpt += "<option value=" + num + ">" + num + "</option>"
+      }
+      $('#sSubmit-hours').append(hoursOpt);
+
+      $('#sSubmit-sDate').blur(function(event) {
+        $('#sSubmit-eDate').val($(this).val());
+      });
+
+      // $('#sSubmit-actCategory').change(function (params) {
+      //   console.log($('#sSubmit-actCategory').val());
+      //   if ($('#sSubmit-actCategory').val() == 12) {
+      //     $('.dispVLWERadio').css('display', 'block')
+      //   } else {
+      //     $('.dispVLWERadio').css('display', 'none');
+      //     $("input[name='vlwe'][value='0']").prop("checked", true);
+      //   }
+      // })
+
+    });
+  </script>

@@ -1,0 +1,143 @@
+<!-- SUBMIT CAPSTONE MODAL -->
+<div class="modal fade modal-primary" id="careerLifeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-login modal-lg">
+    <div class="modal-content">
+      <div class="card card-login card-plain">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="modal-close-icon">&times;</span>
+          </button>
+          <div class="header header-primary text-center">
+            <h4>Career Life Pathway Self-Submit</h4>
+            <div class="changeNothing">
+              <h6 class="color-red">You changed nothing!</h6>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="card-body">
+            <div class="text-right font-italic"><label><span class="color-red">*</span> = Required</label></div>
+            <form id="form-careerLife" class="needs-validation" novalidate>
+              <input type="hidden" id="hidden-projectId">
+              <div class="form-group mg-b-20">
+                <label for="career-course">Course (Teacher)
+                  <span class="color-red">*</span></label>
+                <select name="course" id="career-course" class="custom-select" required>
+                </select>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group mg-b-20">
+                <label for="career-topic">Capstone Topic <span class="color-red">*</span></label>
+                <input type="text" class="form-control" name="topic" id="career-topic" maxlength="120" required>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="career-capCategory">Capstone Category
+                  <span class="color-red">*</span></label>
+                <select name="capCategory" id="career-capCategory" class="custom-select" required>
+                </select>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group mg-b-20">
+                <!-- <label for="career-topic">Capstone Topic <span class="color-red">*</span></label> -->
+                <input type="hidden" class="form-control" name="others" id="career-capCategory-other" maxlength="100" required>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+
+              <div class="form-group mg-b-20">
+                <label class="mg-b-10">Capstone Career Guide</label>
+                <div class="row custom-row">
+                  <div class="col-md-6 mg-b-15">
+                    <label for="career-guide-fName">First Name <span class="color-red">*</span></label>
+                    <input type="text" class="form-control" name="firstName" id="career-guide-fName" required>
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mg-b-15">
+                    <label for="career-guide-lName">Last Name <span class="color-red">*</span></label>
+                    <input type="text" class="form-control" name="lastName" id="career-guide-lName" required>
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+                <div class="row custom-row">
+                  <div class="col-md-6 mg-b-15">
+                    <label for="career-guide-email">E-mail <span class="color-red">*</span></label>
+                    <input type="email" class="form-control" name="email" id="career-guide-email" required>
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mg-b-15">
+                    <label for="career-guide-phone">Phone Number</label>
+                    <input type="text" class="form-control" name="phone" pattern="^\d{3}-\d{3}-\d{4}$" id="career-guide-phone" number="true">
+                    <div class="invalid-feedback">
+                      Please enter a valid phone number.
+                    </div>
+                  </div>
+                </div>
+                <div class="row custom-row">
+                  <div class="col-md-12">
+                    <label for="career-guide-position">Position Title <span class="color-red">*</span></label>
+                    <input type="text" class="form-control" name="position" id="career-guide-position" placeholder="e.g., Bodwell staff, work for City Center, etc." required>
+                    <div class="invalid-feedback">
+                      This field is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="career-description">Capstone Brief Description <span class="color-red">*</span></label>
+                <textarea class="form-control" name="description" id="career-description" rows="10" maxlength="1000" required></textarea>
+                <div class="invalid-feedback">
+                  This field is required.
+                </div>
+              </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button type="button" class="btn btn-success custom-btn" id="career-save-btn">Save</button>
+            <button type="button" class="btn btn-success custom-btn" id="career-submit-btn">Submit</button>
+            <button type="reset" class="btn btn-default custom-btn" id="career-cancel-btn">Cancel</button>
+          </div>
+          <div class="col-md-12 text-center" id="createEdit-text">
+            <div class="text-left" style="display:inline-block;">
+              <label style="width:120px">Last modified at </label><label id="career-modifiedBy"></label><br />
+              <label style="width:120px">Created at </label><label id="career-createdBy"></label>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function() {
+    generateSelector('#career-capCategory', capstoneCategory, capstoneCategory, 'none', '')
+
+    $('#career-capCategory').change(function(event) {
+      var c = $('#career-capCategory').val();
+      if(c == 'Other (Specify below)') {
+        $('#career-capCategory-other').val('');
+        $('#career-capCategory-other').clone().attr('type','text').insertAfter('#career-capCategory-other').prev().remove();
+      } else {
+        $('#career-capCategory-other').val('');
+        $('#career-capCategory-other').clone().attr('type','hidden').insertAfter('#career-capCategory-other').prev().remove();
+      }
+    });
+
+  });
+</script>

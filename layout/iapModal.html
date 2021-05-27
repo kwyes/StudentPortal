@@ -1,0 +1,73 @@
+<!-- Modal for IAP (on Browse APE) -->
+<div class="modal fade modal-primary" id="iapMdl" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="card card-login card-plain">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="modal-close-icon">&times;</span>
+          </button>
+
+          <div class="header header-primary text-center">
+            <h5>Individual Action Plan</h5>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="card-body">
+            <h5>
+              <span class="iap-levelText"></span>
+            </h5>
+            <div class="mg-b-15">
+              <span class="font-weight-bold">STUDENT NAME:</span>
+              <span class="iap-stuName"></span>
+            </div>
+            <div class="mg-b-15">
+              <div class="font-weight-bold">ACADEMIC SUPPORT</div>
+              <div class="ti1"><input class="aep-check iap-chk1" type="checkbox" disabled="disabled" value="Meet with your teachers once per week to check your progress">Meet with your teachers once per week to check your progress</div>
+              <div class="ti1"><input class="aep-check iap-chk2" type="checkbox" disabled="disabled" value="You are required to work with a tutor">You are required to work with a tutor</div>
+            </div>
+            <div class="mg-b-15">
+              <div class="font-weight-bold">AFTER SCHOOL OR EVENING TUTORING INFORMATION</div>
+              <textarea class="form-control maxHeight-120" id="iap-tutoringInf" rows="8" maxlength="1000" readonly="readonly"></textarea>
+            </div>
+            <div class="mg-b-15">
+              <div class="font-weight-bold">EXPECTATIONS IN AND OUT OF CLASS</div>
+              <div class="ti1"><input class="aep-check iap-chk3" type="checkbox" disabled="disabled" value="Ask your teacher a question every day">Ask your teacher a question every day</div>
+              <div class="ti1"><input class="aep-check iap-chk4" type="checkbox" disabled="disabled" value="Sit at the front of the class">Sit at the front of the class</div>
+              <div class="ti1"><input class="aep-check iap-chk5" type="checkbox" disabled="disabled" value="Stay awake in class">Stay awake in class</div>
+              <div class="ti1"><input class="aep-check iap-chk6" type="checkbox" disabled="disabled" value="Speak English ONLY in class">Speak English ONLY in class</div>
+              <div class="ti1"><input class="aep-check iap-chk7" type="checkbox" disabled="disabled" value="Stay ON TASK">Stay ON TASK</div>
+              <div class="ti1"><input class="aep-check iap-chk8" type="checkbox" disabled="disabled" value="Do not use your cell phone; only use your laptop for class assignments">Do not use your cell phone; only use your laptop for class assignments</div>
+              <div class="ti1"><input class="aep-check iap-chk9" type="checkbox" disabled="disabled" value="Write down your homework in your planner">Write down your homework in your planner</div>
+              <div class="ti1"><input class="aep-check iap-chk10" type="checkbox" disabled="disabled" value="Complete all assignments and homework">Complete all assignments and homework</div>
+              <div class="ti1"><input class="aep-check iap-chk11" type="checkbox" disabled="disabled" value="Edit your writing">Edit your writing</div>
+              <div class="ti1"><input class="aep-check iap-chk12" type="checkbox" disabled="disabled" value="Study hard for all your tests/quizzes">Study hard for all your tests/quizzes</div>
+              <div class="ti1"><input class="aep-check iap-chk13" type="checkbox" disabled="disabled" value="Read books at your level for 30-60 minutes each day">Read books at your level for 30-60 minutes each day</div>
+              <div class="ti1"><input class="aep-check iap-chk14" type="checkbox" disabled="disabled" value="Keep a vocabulary list of new words">Keep a vocabulary list of new words</div>
+              <div class="ti1"><input class="aep-check iap-chk15" type="checkbox" disabled="disabled" value="Keep your binder organized">Keep your binder organized</div>
+              <div class="ti1"><input class="aep-check iap-chk16" type="checkbox" disabled="disabled" value="Bring all your materials to class (books, pencil/pen, laptop)">Bring all your materials to class (books, pencil/pen, laptop)</div>
+              <div class="ti1"><input class="aep-check iap-chk17" type="checkbox" disabled="disabled" value="Participate in your extra-curricular activity after school">Participate in your extra-curricular activity after school</div>
+              <div class="ti1"><input class="aep-check iap-chk18" type="checkbox" disabled="disabled" value="Speak and listen to English after class">Speak and listen to English after class</div>
+            </div>
+            <div class="font-weight-bold">TEACHER RECOMMENDATIONS (ADDITIONAL)</div>
+            <textarea class="form-control maxHeight-170" id="iap-comment" rows="15" maxlength="1000" readonly="readonly"></textarea>
+          </div>
+
+          <div class="text-center modal-footer-wrapper">
+            <div class="row">
+              <div class="col-md-12 text-right">
+                <button type="button" class="btn btn-fill btn-small btn-default" id="iapMdl-close-btn">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+
+  });
+</script>

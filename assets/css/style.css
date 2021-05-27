@@ -1,0 +1,940 @@
+body {
+  overflow: auto;
+}
+
+.user {
+  display: none;
+}
+
+#participationHours a,
+#participationHours a:visited {
+  color: #22a6b3 !important;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+#participationHours a:hover,
+#participationHours a:focus {
+  color: #22a6b3 !important;
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #9a9a9a !important;
+}
+
+.full-page>.content {
+  padding-top: 3vh;
+}
+
+.ps-container>.ps-scrollbar-x-rail {
+  display: none !important;
+}
+
+table th,
+table td {
+  padding: 12px 5px !important;
+}
+
+.login-title {
+  color: #30297e;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.login-logo {
+  max-width: 480px;
+  min-width: 260px;
+  height: auto;
+  width: 25%;
+}
+
+.login-page .card-login {
+  border-radius: 0px;
+}
+
+.login-page .content .container {
+  margin-top: 3vh !important;
+}
+
+#resetEmailPwModal .form-control {
+  background-color: #FFFFFF !important;
+  border: 1px solid #DDDDDD !important;
+  color: #66615b !important;
+}
+
+.text-reset {
+  color: #eb6532;
+  font-weight: bold;
+  margin: 0;
+}
+
+.logo-small {
+  widows: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.login-card-border {
+  border: solid 5px #30297e;
+}
+
+.bst-title {
+  text-align: center;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.bst-title-mini {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.card-icon {
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #30297e;
+}
+
+.bg-white,
+.navbar>.container-fluid {
+  background-color: #f4f3ef !important;
+}
+
+.navbar.navbar-transparent {
+  border-bottom: none;
+}
+
+.student-img,
+.stf1-img,
+.stf2-img {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 15px;
+  border-radius: 4px !important;
+}
+
+#sSubmitMdl-student-img,
+#sSubmitMdl-approverPic {
+  width: 140px !important;
+  height: 210px !important;
+  margin: 20px auto;
+  border-radius: 4px;
+}
+
+.select-course,
+.select-category {
+  font-size: 12px;
+  margin-right: 20px;
+  padding: 5px;
+  color: #9a9a9a;
+  border-radius: .2rem;
+  border: 1px solid #dddddd;
+}
+
+.mg-b-0 {
+  margin-bottom: 0;
+}
+
+.mg-r-10 {
+  margin-right: 15px;
+}
+
+.mg-r-20 {
+  margin-right: 20px;
+}
+
+.mg-lr-20 {
+  margin: 0 20px;
+}
+
+.mg-tb-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mg-b-20 {
+  margin-bottom: 20px;
+}
+
+.mg-b-15 {
+  margin-bottom: 15px;
+}
+
+.mg-b-10 {
+  margin-bottom: 10px;
+}
+
+.mg-t-40 {
+  margin-top: 40px;
+}
+
+#term-status td {
+  width: 33%;
+}
+
+#student-inf td {
+  width: 50%;
+}
+
+#student-inf tr:first-child>td:first-child,
+#student-inf tr:first-child>td:nth-child(2),
+#weeks tr:first-child>td:first-child,
+#weeks tr:first-child>td:nth-child(2),
+#participation-actDetail tr:first-child>td:first-child,
+#participation-actDetail tr:first-child>td:nth-child(2) {
+  border-top: none;
+}
+
+#weeks .date-col {
+  width: 15%;
+}
+
+#datatable-gradebook td:nth-child(1) {
+  white-space: nowrap !important;
+}
+
+#datatable-gradebook td:nth-child(2),
+#datatable-gradebook td:nth-child(3),
+#datatable-gradebook td:nth-child(7) {
+  text-align: left;
+}
+
+#datatable-gradebook td:nth-child(4),
+#datatable-gradebook td:nth-child(5),
+#datatable-gradebook td:nth-child(6) {
+  text-align: right !important;
+  padding-right: 30px !important;
+}
+
+.participation-buttons {
+  text-align: right;
+}
+
+#participationHours tr {
+  text-align: center;
+}
+
+#participationHours td:nth-child(1) {
+  white-space: nowrap !important;
+}
+
+#participationHours td:nth-child(2),
+#participationHours td:nth-child(7) {
+  text-align: left;
+}
+
+#participationHours td:nth-child(6) {
+  text-align: right !important;
+  padding-right: 30px !important;
+}
+
+.icon-onTable {
+  margin-right: 5px;
+}
+
+button {
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.browseAct-btn {
+  margin-right: 20px;
+}
+
+.submitHour-btn {
+  margin-right: 15px;
+}
+
+.modal {
+  padding: 0 !important;
+  overflow-y: auto;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-dialog {
+  padding-top: 10px;
+}
+
+.modal-body>.form>.card-body>.form-group,
+.modal-body>.form>.card-body>.row>.col-md-6>.form-group {
+  margin-bottom: 20px;
+}
+
+#participation-act_wrapper {
+  padding: 0;
+}
+
+#sSubmit-approverPic {
+  width: 140px;
+  height: 210px;
+  border-radius: 4px !important;
+  margin: auto 0;
+}
+
+.frame-approverPic {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+#submitHourModal textarea {
+  max-height: 155px !important;
+}
+
+.custom-row {
+  margin: 0;
+}
+
+.form-control:valid:focus,
+.form-control:invalid:focus,
+.custom-select:valid:focus,
+.custom-select:invalid:focus {
+  box-shadow: none !important;
+}
+
+.modal-xl {
+  max-width: 1800px;
+}
+
+#participation-act td:nth-child(1),
+#participation-act td:nth-child(2) {
+  text-align: left;
+}
+
+#participation-act td:nth-child(4) {
+  text-align: right;
+}
+
+.custom-btn {
+  width: 88px;
+}
+
+#participation-actDetail td {
+  padding-left: 15px !important;
+}
+
+#participation-actDetail td:first-child {
+  background-color: #e5f9f9;
+  width: 25%;
+}
+
+.form-check-radio {
+  margin-bottom: 0;
+}
+
+.actDetailModal-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logout {
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.logout>i {
+  font-size: 24px;
+  margin-right: 12px;
+  line-height: 30px;
+  width: 34px;
+}
+
+.logout>p {
+  font-size: 12px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.bootstrap-datetimepicker-widget {
+  width: 400px !important;
+  height: 400px !important;
+}
+
+.bootstrap-datetimepicker-widget table td span {
+  white-space: nowrap;
+}
+
+.bootstrap-datetimepicker-widget table tr,
+.bootstrap-datetimepicker-widget table td,
+.bootstrap-datetimepicker-widget table td span,
+.bootstrap-datetimepicker-widget table td a span {
+  padding: 5px !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+.color-red {
+  color: #ef815c !important;
+}
+
+.color-grey {
+  color: grey;
+}
+
+.resetSchoolEmailBtn .btn-danger {
+  background-color: #c82333;
+  text-transform: none;
+  font-size: 1.0em;
+}
+
+.resetSchoolEmailBtn .btn-danger:hover,
+.resetSchoolEmailBtn .btn-danger:focus,
+.resetSchoolEmailBtn .btn-danger:active,
+.resetSchoolEmailBtn .btn-danger.active,
+.resetSchoolEmailBtn .btn-danger:active:focus,
+.resetSchoolEmailBtn .btn-danger:active:hover,
+.resetSchoolEmailBtn .btn-danger.active:focus,
+.resetSchoolEmailBtn .btn-danger.active:hover,
+.resetSchoolEmailBtn .show>.btn-danger.dropdown-toggle,
+.resetSchoolEmailBtn .show>.btn-danger.dropdown-toggle:focus,
+.resetSchoolEmailBtn .show>.btn-danger.dropdown-toggle:hover {
+  background-color: #dc3545 !important;
+  color: #FFFFFF !important;
+  box-shadow: none !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  display: block;
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #eee;
+  opacity: 0.9;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a1a1a1;
+}
+
+#participationHours i {
+  font-size: 22px;
+  position: relative;
+  top: 3px;
+}
+
+.icon-reference i {
+  font-size: 16px;
+  position: relative;
+  top: 3px;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: #FFFFFF;
+  color: #66615B;
+  cursor: not-allowed;
+}
+
+.progress {
+  height: 15px;
+  margin-bottom: 10px;
+}
+
+.modal-close-icon {
+  font-size: 2em;
+}
+
+.font10 {
+  font-size: 10px !important;
+}
+
+.font12 {
+  font-size: 12px !important;
+}
+
+.textWrap {
+  white-space: normal !important;
+}
+
+.width-auto {
+  width: auto !important;
+}
+
+.width-100per {
+  width: 100%
+}
+
+#minimizeSidebar,
+#minimizeSidebar:focus {
+  background: #30297E !important;
+}
+
+#minimizeSidebar:hover {
+  background: #474199 !important;
+}
+
+.sidebar-mini>.logo {
+  display: none;
+}
+
+#dashboard-Career td {
+  padding: 25px 5px !important;
+}
+
+#dashboard-Career td:nth-child(1) {
+  max-width: 120px;
+}
+
+#dashboard-Career td:nth-child(3) {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#dashboard-Career td:nth-child(2),
+#dashboard-Career td:nth-child(4) {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#dashboard-Career td:nth-child(5) {
+  min-width: 90px;
+}
+
+#dashboard-Career td:nth-child(6) {
+  width: 80px;
+}
+
+.changeNothing {
+  margin: 10px 0;
+  display: none;
+}
+
+.italic-grey {
+  font-style: italic;
+  color: #9A9A9A;
+}
+
+#datatable-gradebook td,
+#participationHours td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px !important;
+}
+
+.pagination {
+  justify-content: flex-end;
+}
+
+.aep-check {
+  margin-right: 10px;
+}
+
+.naText {
+  color: #9a9a9a;
+  font-style: italic;
+}
+
+.mt-td {
+  background-color: #d9ebfc
+}
+
+.ft-td {
+  background-color: #ffeae5;
+}
+
+.row-eq-height {
+  display: flex;
+  align-items: center;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-underline {
+  text-decoration: underline;
+}
+
+/* Height */
+.maxHeight-120 {
+  max-height: 120px !important;
+}
+
+.maxHeight-170 {
+  max-height: 170px !important;
+}
+
+@media only screen and (max-width: 1373px) {
+  .select-category {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 1280px) {
+
+  /* #datatable-gradebook tbody,
+    #participationHours tbody {
+        overflow: scroll !important;
+        white-space: nowrap !important;
+    } */
+  .sidebar,
+  .sidebar .sidebar-wrapper,
+  .sidebar-mini .sidebar:hover,
+  .sidebar-mini .sidebar:hover .sidebar-wrapper {
+    width: 210px;
+  }
+
+  .logo-small {
+    widows: 110px;
+    height: 110px;
+  }
+
+  .bst-title {
+    font-size: 15px;
+  }
+
+  .sidebar .nav i,
+  .off-canvas-sidebar .nav i {
+    font-size: 20px;
+    margin-right: 0;
+  }
+
+  .main-panel {
+    width: calc(100% - 210px);
+  }
+
+  #dashboard-Career td:nth-child(3) {
+    max-width: 120px;
+  }
+
+  #dashboard-Career td:nth-child(2),
+  #dashboard-Career td:nth-child(4) {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-panel {
+    width: 100%;
+  }
+
+  #bodyClick {
+    left: 210px;
+  }
+
+  .nav-open .main-panel {
+    right: 0;
+    -webkit-transform: translate3d(210px, 0, 0);
+    transform: translate3d(210px, 0, 0);
+  }
+
+  .sidebar,
+  .bootstrap-navbar {
+    width: 210px;
+    -webkit-transform: translate3d(-210px, 0, 0);
+    transform: translate3d(-210px, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .participation-buttons {
+    text-align: center;
+  }
+
+  .modal-body {
+    padding: 8px;
+  }
+
+  #datatable-gradebook td,
+  #participationHours td {
+    padding-left: 30px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .full-page .footer {
+    position: relative;
+  }
+
+  .select-category {
+    width: 60%;
+    margin-right: 0;
+  }
+
+  .browseAct-btn,
+  .submitHour-btn {
+    margin-right: 0px;
+  }
+
+  #participationHours_filter label input {
+    width: 170px;
+  }
+
+  #datatable-gradebook ul,
+  #participationHours ul {
+    width: 90% !important;
+    text-align: left;
+  }
+
+  #datatable-gradebook ul li,
+  #participationHours ul li {
+    white-space: nowrap;
+  }
+
+  #datatable-gradebook td,
+  #participationHours td {
+    padding-left: 30px !important;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  #datatable-gradebook th,
+  #participationHours th {
+    min-width: 230px;
+  }
+}
+
+.modalSubHeader {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.modal-footer-wrapper {
+  border-top: 1px solid #DDDDDD;
+  padding: 0px;
+}
+
+#display-career-card {
+  display: none;
+}
+
+.career-link-CLE,
+.career-link-CLC {
+  color: #51cbce !important;
+  cursor: pointer;
+}
+
+.btn-reset-devices {
+  width: 339.06px;
+  height: 58px;
+}
+
+#returnSchoolDevicesModal .form-control {
+  background-color: #FFFFFF !important;
+  border: 1px solid #DDDDDD !important;
+  color: #66615b !important;
+}
+
+.form-input-bottom-line {
+  border: 0;
+  border-bottom: 1px solid #DDDDDD;
+  outline: 0;
+}
+
+.gallery-card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+	    height: 132px;
+		margin-bottom:14px;
+}
+.gallery-card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    /*padding: 1.25rem;*/
+}
+.gallery-card img {
+    height: 100px;
+    width: 100%;
+}
+label{
+    margin-bottom: 0 !important;
+}
+/*--checkbox--*/
+
+.block-check {
+    display: block;
+    position: relative;
+
+
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.block-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  /* background-color: #eee; */
+	cursor: pointer;
+}
+
+/* On mouse-over, add a grey background color */
+.block-check:hover input ~ .checkmark {
+    background-color: #dddddd;
+    border-radius: 50%;
+}
+
+/* When the checkbox is checked, add a blue background */
+.block-check input:checked ~ .checkmark {
+    background-color: #dddddd;
+    border-radius: 50%;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.block-check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.block-check .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-radius: 50%;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
+#searchStuMdl-table th {
+  font-size: 14px;
+}
+
+#searchStuMdl-table td {
+  font-size: 12px;
+}
+
+#searchStuMdl-table th:nth-child(1),
+#searchStuMdl-table td:nth-child(1),
+#searchStuMdl-table th:nth-child(3),
+#searchStuMdl-table td:nth-child(3){
+  width: 30%;
+}
+
+
+
+#searchStuMdl-table tbody {
+  display: block;
+  height: 210px;
+  overflow: auto;
+}
+
+
+#searchStuMdl-table thead,
+#searchStuMdl-table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#searchStuMdl-table tbody tr {
+  cursor: pointer;
+}
+.staff-photo{
+  width: 140px;
+  height: 210px;
+  border-radius: 4px !important;
+  margin: auto 0;
+}
+
+#requestLeaveTable tbody td:nth-child(6){
+  text-align: center;
+}
+
+.filter-select {
+  font-size: 12px;
+  margin-right: 20px;
+  padding: 5px;
+  color: #9a9a9a;
+  border-radius: .2rem;
+  border: 1px solid #dddddd;
+}
+
+.notes{
+  background-attachment: local;
+  background-image:
+      linear-gradient(to right, white 10px, transparent 10px),
+      linear-gradient(to left, white 10px, transparent 10px),
+      repeating-linear-gradient(white, white 30px, #000 30px, #000 31px, white 31px);
+  line-height: 31px;
+  padding: 8px;
+  width:100%;
+  border: none;
+  resize: none;
+}

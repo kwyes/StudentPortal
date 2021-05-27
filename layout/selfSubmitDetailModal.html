@@ -1,0 +1,296 @@
+<!-- Modal for School Activity Detail(on Browse School Activities) -->
+<!-- <div class="modal fade modal-primary" id="selfSubmitDetailModal" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true"> -->
+<div class="modal" id="selfSubmitDetailModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="card card-login card-plain">
+                <div class="modal-header justify-content-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="modal-close-icon">&times;</span>
+                    </button>
+
+
+                    <div class="header header-primary text-center">
+                        <h4>View Self-Submit Hours</h4>
+                        <label class="sSubmitMdl-term"></label>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body">
+                        <div class="text-right font-italic"><label><span class="color-red">*</span> = Required</label>
+                        </div>
+                        <form class="needs-validation" novalidate id="selfSubmitDetailForm">
+                            <input type="hidden" id="sSubmitMdl-hidden-actId">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sSubmitMdl-student-img">Student Picture</label><br />
+                                        <div class="text-center">
+                                            <img draggable="false" src="img/user.png" alt="student-img" id="sSubmitMdl-student-img"
+                                                onerror="this.src='img/user.png'" class="img-m">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sSubmitMdl-studentId">Student ID</label>
+                                        <input type="text" class="form-control" id="sSubmitMdl-studentId"
+                                            name="studentId" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sSubmitMdl-student-name">Student</label>
+                                        <input type="text" class="form-control" id="sSubmitMdl-student-name"
+                                            name="student" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sSubmitMdl-approverPic">Approver Picture</label><br />
+                                        <div class="text-center">
+                                            <img draggable="false" src="img/user.png" alt="approverPic" id="sSubmitMdl-approverPic"
+                                                onerror="this.src='img/user.png'" class="img-m">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="sSubmitMdl-apprStaff">Approver Staff <span
+                                                class="color-red">*</span></label>
+                                        <select name="approver" id="sSubmitMdl-approver" class="custom-select"
+                                            onchange="getFullStaffName('sSubmitMdl-approver', 'sSubmitMdl-approver-FullName')"
+                                            required>
+                                        </select>
+                                        <input type="hidden" id="sSubmitMdl-approver-FullName" name="approverFullName"
+                                            value="">
+                                        <div class="invalid-feedback">
+                                            This field is required.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="sSubmitMdl-status">Status</label>
+                                        <input type="text" id="sSubmitMdl-status" class="form-control" name="status"
+                                            readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="sSubmitMdl-title">Activity Name <span class="color-red">*</span></label>
+                                <input type="text" class="form-control" id="sSubmitMdl-title" name="title" required>
+                                <div class="invalid-feedback">
+                                    This field is required.
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sSubmitMdl-category">Activity Category <span class="color-red">*</span>
+                                </label>
+                                <select name="category" id="sSubmitMdl-category" class="custom-select" name="category"
+                                    required>
+                                    <option value="">Select..</option>
+                                    <option value="10">Physical, Outdoor & Recreation Education</option>
+                                    <option value="11">Academic, Interest & Skill Development</option>
+                                    <option value="12">Citizenship, Interaction & Leadership Experience</option>
+                                    <option value="13">Arts, Culture & Local Exploration</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    This field is required.
+                                </div>
+                            </div>
+
+                            <div class="form-group dispVLWE">
+                                <label>Qualifies for Career Exploration hours? <span class="color-red">*</span></label>
+                                <div class="row custom-row">
+                                    <div class="form-check-radio col-md-3">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input sSubmit-vlwe" type="radio" name="vlwe" id=""
+                                                value="1" autocomplete="off">
+                                            Yes
+                                            <span class="form-check-sign"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check-radio col-md-3">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input sSubmit-vlwe" type="radio" name="vlwe" id=""
+                                                value="0" autocomplete="off">
+                                            No
+                                            <span class="form-check-sign"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sSubmitMdl-location">Location (e.g. Heywood Park, Genesis Gym, etc.) <span
+                                        class="color-red">*</span>
+                                </label>
+                                <input type="text" class="form-control" id="sSubmitMdl-location" name="location"
+                                    required>
+                                <div class="invalid-feedback">
+                                    This field is required.
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="sSubmitMdl-sDate">Start Date <span
+                                                class="color-red">*</span></label>
+                                        <input type="text" class="form-control datepicker" data-date-format="YYYY-MM-DD"
+                                            name="sDate" id="sSubmitMdl-sDate" required>
+                                        <div class="invalid-feedback">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="sSubmitMdl-eDate">End Date <span class="color-red">*</span></label>
+                                        <input type="text" class="form-control datepicker" data-date-format="YYYY-MM-DD"
+                                            name="eDate" id="sSubmitMdl-eDate" required>
+                                        <div class="invalid-feedback">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="sSubmitMdl-hours">Hours <span class="color-red">*</span></label>
+                                        <select name="hours" id="sSubmitMdl-hours" class="custom-select" required>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="addSubmitMdl-stuComment1">Student Comment <span
+                                                class="color-red">*</span></label>
+                                        <textarea id="sSubmitMdl-stuComment1" name="comment1" rows="10"
+                                            class="md-textarea form-control" placeholder="" maxlength="1000"
+                                            required></textarea>
+                                        <div class="invalid-feedback">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="sSubmitMdl-stuComment2" name="comment2" rows="10"
+                                            class="md-textarea form-control" maxlength="1000" required></textarea>
+                                        <div class="invalid-feedback">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="sSubmitMdl-stuComment3" name="comment3" rows="10"
+                                            class="md-textarea form-control" maxlength="1000" required></textarea>
+                                        <div class="invalid-feedback">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sSubmitMdl-aprComment">Approver Comment</label>
+                                        <textarea id="sSubmitMdl-aprComment" name="comment" rows="10"
+                                            class="md-textarea form-control" maxlength="1000" readonly></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="text-center modal-footer-wrapper">
+                        <div class="row">
+                            <div class="col-md-12 text-center changeNothing">
+                                <h6 class="color-red">You changed nothing!</h6>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-fill btn-success"
+                                    id="sSubmitMdl-save-btn">Save</button>
+                                <button type="button" class="btn btn-fill btn-default"
+                                    id="sSubmitMdl-close-btn">Close</button>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="text-left" style="display:inline-block;">
+                                    <label style="width:120px">Last modified at </label><label
+                                        id="sSubmitMdl-modifiedBy"></label><br />
+                                    <label style="width:120px">Created at </label><label
+                                        id="sSubmitMdl-createdBy"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        ajaxtoApprovalList('#sSubmitMdl-approver');
+
+        $('#sSubmitMdl-sDate').blur(function(event) {
+          $('#sSubmitMdl-eDate').val($(this).val());
+        });
+        if($('.sSubmit-vlwe').val() == 1){
+          var comment1 = "In full sentences, explain what you did for this activity in DETAIL. (ex. survey people, talk to career guide, work on product…) ";
+          var comment2 =
+            "In min 50 words or more, explain in full sentences.\n" +
+            "What SKILLS did you learn/develop from this? Explain how you developed these skills. ";
+          var comment3 = "If these hours are to be counted for your Career Exploration Hours, answer the following in full sentences: \n" +
+              "How might the above skills be important for your future career or post-secondary path? ";
+          $('#sSubmitMdl-stuComment1').prop('placeholder', comment1);
+          $('#sSubmitMdl-stuComment2').prop('placeholder', comment2);
+          $('#sSubmitMdl-stuComment3').prop('placeholder', comment3);
+        } else {
+          var comment1 = "Describe in detail what you did on this activity or your duties\n" +
+              "(e.g., I helped to dig holes in the ground and plant trees at the park, I performed my upper body exercise circuit, etc.)";
+          $('#sSubmitMdl-stuComment1').prop('placeholder', comment1);
+
+          var comment2 =
+              "Describe what skills you practiced or learned, and how you can use these skills in the future.";
+          $('#sSubmitMdl-stuComment2').prop('placeholder', comment2);
+
+          var comment3 = "Your event supervisor name and contact info.\n" +
+              "(if this does not apply, write ‘N/A’)";
+          $('#sSubmitMdl-stuComment3').prop('placeholder', comment3);
+        }
+
+
+        $('.sSubmit-vlwe').change(function(event) {
+          if(this.value == 1){
+            var comment1 = "In full sentences, explain what you did for this activity in DETAIL. (ex. survey people, talk to career guide, work on product…) ";
+            var comment2 =
+              "In min 50 words or more, explain in full sentences.\n" +
+              "What SKILLS did you learn/develop from this? Explain how you developed these skills. ";
+            var comment3 = "If these hours are to be counted for your Career Exploration Hours, answer the following in full sentences: \n" +
+                "How might the above skills be important for your future career or post-secondary path? ";
+            $('#sSubmitMdl-stuComment1').prop('placeholder', comment1);
+            $('#sSubmitMdl-stuComment2').prop('placeholder', comment2);
+            $('#sSubmitMdl-stuComment3').prop('placeholder', comment3);
+          } else {
+            var comment1 = "Describe in detail what you did on this activity or your duties\n" +
+              "(e.g., I helped to dig holes in the ground and plant trees at the park, I performed my upper body exercise circuit, etc.)";
+            var comment2 =
+              "Describe what skills you practiced or learned, and how you can use these skills in the future.";
+            var comment3 = "Your event supervisor name and contact info.\n" +
+              "(if this does not apply, write ‘N/A’)";
+            $('#sSubmitMdl-stuComment1').prop('placeholder', comment1);
+            $('#sSubmitMdl-stuComment2').prop('placeholder', comment2);
+            $('#sSubmitMdl-stuComment3').prop('placeholder', comment3);
+          }
+        });
+
+        var hoursOpt = "<option value=''>Select..</option>";
+        var num;
+        for (let i = 0.5; i <= 40; i += 0.5) {
+            num = i.toFixed(1)
+            hoursOpt += "<option value=" + num + ">" + num + "</option>"
+        }
+        $('#sSubmitMdl-hours').append(hoursOpt);
+    });
+</script>
